@@ -21,13 +21,13 @@ def predict():
     data = []
 
     data.append(int(age))
-    data.append(int(children))
-    data.append(int(bmi))
-
     if sex == 'Laki-Laki':
         data.extend([0, 1])
     else:
         data.extend([1, 0])
+
+    data.append(int(bmi))
+    data.append(int(children))
 
     if smoker == 'Ya':
         data.extend([0, 1])
